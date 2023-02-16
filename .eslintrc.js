@@ -30,5 +30,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/function-component-definition": ["error", {namedComponents: "arrow-function"}],
+        "arrow-body-style": ["error", "as-needed"]
     }
 }
