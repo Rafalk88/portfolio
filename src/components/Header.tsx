@@ -9,6 +9,10 @@ import CV from './svg/CV';
 import { LiElement } from './LiElement';
 import { LINKEDIN_LINK } from './constants';
 
+interface Props {
+  otherProps?: any,
+}
+
 const Wrapper = styled.div`
   width: 100%;
   background-color: rgba(50, 50, 50, 0.7);
@@ -26,10 +30,6 @@ const Container = styled.header`
   align-items: center;
   margin: 0 auto;
 `;
-
-interface Props {
-  otherProps?: any,
-}
 
 const Header: React.FC<Props> = (props) => {
   const {

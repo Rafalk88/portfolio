@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Manrope', sans-serif;
   }
   body{
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(32, 32, 32, 1);
   }
   a{
     text-decoration: none;
