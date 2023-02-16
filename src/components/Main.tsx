@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Hero from './Hero';
 import { Container } from './styles/Container.styled';
 
 const Wrapper = styled.div`
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
 const Main: React.FC = () => (
   <Wrapper>
     <Container>
-      Hi There!
+      <Hero />
     </Container>
   </Wrapper>
 );
