@@ -6,6 +6,8 @@ import Logo from './svg/Logo';
 import LinkedIn from './svg/LinkedIn';
 import CV from './svg/CV';
 
+import { Container } from './styles/Container.styled';
+import { Wrapper } from './styles/Wrapper.styled';
 import { LiElement } from './LiElement';
 import { LINKEDIN_LINK } from './constants';
 
@@ -13,22 +15,13 @@ interface Props {
   otherProps?: any,
 }
 
-const Wrapper = styled.div`
-  width: 100%;
-  background-color: rgba(50, 50, 50, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
+const HeaderContainer = styled(Container)`
+  height: 80px;
+  justify-content: space-between;
 `;
 
-const Container = styled.header`
-  width: 100%;
-  max-width: 1200px;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+const HeaderWrapper = styled(Wrapper)`
+  background-color: rgba(50, 50, 50, 0.7);
 `;
 
 const Header: React.FC<Props> = (props) => {
@@ -37,9 +30,9 @@ const Header: React.FC<Props> = (props) => {
   } = props;
 
   return (
-    <Wrapper>
+    <HeaderWrapper>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Container {...otherProps}>
+      <HeaderContainer {...otherProps}>
         <Logo href="./" />
         <UlList>
           <LiElement><a href="./">Portfolio</a></LiElement>
@@ -47,8 +40,8 @@ const Header: React.FC<Props> = (props) => {
           <LiElement icon><LinkedIn href={LINKEDIN_LINK} /></LiElement>
           <LiElement icon><CV /></LiElement>
         </UlList>
-      </Container>
-    </Wrapper>
+      </HeaderContainer>
+    </HeaderWrapper>
   );
 };
 
