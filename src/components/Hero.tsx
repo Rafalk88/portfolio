@@ -63,6 +63,34 @@ const Aside = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: end;
+
+  &>figure>img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 4.125rem;
+  }
+
+  &:last-child{
+    text-align: right;
+  }
+
+  &:last-child article:nth-child(1){
+    color: rgba(255,255,255,1);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  &:last-child article:nth-child(2){
+    color: rgba(149, 149, 149, 1);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+    margin-bottom: 3.875rem;
+  }
 `;
 
 const Hero: React.FC = () => (
@@ -94,7 +122,7 @@ const Hero: React.FC = () => (
       </footer>
     </MainArticle>
     <Aside>
-      <figure><img src="" alt="avatar" /></figure>
+      <figure><img src="https://media.licdn.com/dms/image/C4D03AQGkvZ6-3vJtJw/profile-displayphoto-shrink_400_400/0/1644351937112?e=1682553600&v=beta&t=nm3-rYj9Mvi9iJyHDraSrHC62R6mOFUzeB4g-YI9Ojc" alt="avatar" /></figure>
       <section>
         <article>RAFAŁ KOCHANECKI</article>
         <article>Front-end developer</article>
