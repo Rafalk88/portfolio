@@ -24,6 +24,26 @@ const HeaderWrapper = styled(Wrapper)`
   background-color: rgba(50, 50, 50, 0.7);
 `;
 
+const menu: {
+  id: number
+  href: string
+  content: string | JSX.Element
+  icon: boolean
+}[] = [
+  {
+    id: 1, href: './', content: 'Portfolio', icon: false,
+  },
+  {
+    id: 2, href: './', content: 'Kontakt', icon: false,
+  },
+  {
+    id: 3, href: LINKEDIN_LINK, content: <LinkedIn />, icon: true,
+  },
+  {
+    id: 4, href: './', content: <CV />, icon: true,
+  },
+];
+
 const Header: React.FC<Props> = (props) => {
   const {
     ...otherProps
@@ -35,10 +55,13 @@ const Header: React.FC<Props> = (props) => {
       <HeaderContainer {...otherProps}>
         <Logo href="./" />
         <UlList>
-          <LiElement><a href="./">Portfolio</a></LiElement>
-          <LiElement><a href="./">Kontakt</a></LiElement>
-          <LiElement icon><LinkedIn href={LINKEDIN_LINK} /></LiElement>
-          <LiElement icon><CV /></LiElement>
+          {menu.map((item) => (
+            <LiElement key={item.id} icon={item.icon}>
+              <a href={item.href}>
+                {item.content}
+              </a>
+            </LiElement>
+          ))}
         </UlList>
       </HeaderContainer>
     </HeaderWrapper>
