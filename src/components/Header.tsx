@@ -12,7 +12,7 @@ import { LiElement } from './LiElement';
 import { LINKEDIN_LINK } from './constants';
 
 type Props = {
-  otherProps?: any,
+  otherProps?: JSX.Element | null,
 };
 
 const HeaderContainer = styled(Container)`

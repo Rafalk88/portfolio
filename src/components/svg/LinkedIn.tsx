@@ -8,7 +8,6 @@ const AStyled = styled.a`
 const LinkedIn = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
   const {
     href,
-    ...otherProps
   } = props;
   return (
     <AStyled href={href}>

@@ -11,7 +11,7 @@ const UlStyled = styled.ul`
 `;
 
 type UlProps = {
-  children: any,
+  children: JSX.Element | JSX.Element[],
 };
 
 export const UlList: React.FC<UlProps> = ({ children }) => <UlStyled>{children}</UlStyled>;
