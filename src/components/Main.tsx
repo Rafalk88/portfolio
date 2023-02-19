@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Hero from './Hero';
+import Project from './Project';
 import { Container } from './styles/Container.styled';
 
 const Wrapper = styled.div`
@@ -9,11 +10,16 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+const MainContainer = styled(Container)`
+  flex-direction: column;
+`;
+
 const Main: React.FC = () => (
   <Wrapper>
-    <Container>
+    <MainContainer>
       <Hero />
-    </Container>
+      <Project />
+    </MainContainer>
   </Wrapper>
 );
 
