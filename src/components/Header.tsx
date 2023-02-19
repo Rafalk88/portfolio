@@ -11,9 +11,9 @@ import { Wrapper } from './styles/Wrapper.styled';
 import { LiElement } from './LiElement';
 import { LINKEDIN_LINK } from './constants';
 
-interface Props {
+type Props = {
   otherProps?: any,
-}
+};
 
 const HeaderContainer = styled(Container)`
   height: 80px;
